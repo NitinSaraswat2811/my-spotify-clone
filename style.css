@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.left{
+    width: 25vw;
+    padding: 10px;
+}
+.right{
+    width: 75vw;
+    margin: 16px 0;
+    max-height: 70vh;
+    position: relative;
+}
+.home ul li{
+    display: flex;
+    width: 14px;
+    list-style: none;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.home{
+    padding: 10px;
+}
+.heading{
+    display: flex;
+    gap: 15px;
+    padding-top:14px;
+    padding-left:23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+  
+}
+.heading img{
+    width: 2.4em;
+}
+.header{
+    background-color: rgb(34, 34, 34);
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.header > *{
+    padding:20px;
+}
+.CardContainer{
+    margin: 10px;
+    display: flex;
+gap: 10px;
+flex-wrap: wrap;
+overflow-y: auto;
+max-height: 60vh;
+}
+ .card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all .9s;
+
+}
+.card > *{
+    padding-top: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.play{
+    opacity: 0;
+    transition: all 1s ease-out;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    fill: #1db954;
+    top: 190px;
+    right: 14px; 
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.spotifyPlaylist{
+    padding: 16px;
+}
+.spotifyPlaylist h1{
+    padding:16px;
+}
+.card:hover{
+    background-color: rgb(105, 103, 103);
+    cursor: pointer;
+}
+.card:hover .play{
+    opacity: 1;
+}
+.buttons > *{
+    margin: 0 12px ;
+}
+.Signupbtn{
+    background-color: rgb(34, 34, 34);
+    color: rgb(133, 132, 132);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline:none;
+    cursor: pointer;
+}
+.Signupbtn:hover{
+    font-size: 17px;
+    color: white;
+}
+.Loginbtn{
+    background-color: #fff;
+    border-radius: 21px;
+    color: black;
+    padding: 10px;
+    width: 79px;
+    cursor: pointer;
+}
+.Loginbtn:hover{
+font-weight: bold;
+padding: 10px 14px;
+}
+/* For webkit browsers like Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    width: 12px;  /* Set the width of the scrollbar */
+    height: 12px; /* Set the height of the horizontal scrollbar */
+  }
+  
+  /* The track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #2c2c2c;  /* Dark gray background */
+    border-radius: 10px;   /* Rounded corners for a smoother look */
+  }
+  
+  /* The handle (draggable part of the scrollbar) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #444;  /* A lighter dark color */
+    border-radius: 10px;      /* Rounded corners for the thumb */
+    border: 3px solid #2c2c2c; /* Subtle border around the thumb */
+  }
+  
+  /* When the scrollbar is being hovered over */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;  /* Slightly lighter shade when hovered */
+  }
+  .playbar{
+    position: fixed;
+    bottom: 30px;
+    padding: 12px;
+    min-height: 40px;
+    border-radius: 7px;
+    filter: invert(1); 
+    width: 71vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 50px; */
+    margin-bottom: 0;
+    background-color: #e2d9d9
+  
+  }
+  .songbtn{
+    margin-right: 2vw;
+  }
+  .songlist{
+    display: flex;
+    justify-content: space-between;
+    gap: 31px;
+    cursor: pointer;
+    border:  2px solid #fff;
+    border-radius: 5px;
+    margin: 12px;
+    padding: 13px;
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .SongsHeader{
+    display: flex;
+    justify-content: space-between;
+    gap: 11px;
+    cursor: pointer;
+    border:  2px solid #fff;
+    border-radius: 5px;
+    margin: 12px;
+    padding: 13px;
+  }
+   .songlist::-webkit-scrollbar{ 
+    width: 8px;
+    background-color: #2c2c2c;
+  }
+  .songlist::-webkit-scrollbar-thumb{
+    background-color:#444;
+    border-radius:4px;
+  }
+  .songlist::-webkit-scrollbar-thumb:hover{
+    background-color: #555;
+  }
+  .songlist::-webkit-scrollbar-track{
+    background-color:#2c2c2c;
+  }
+  .songlist ul li{
+    gap: 30px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px ;
+    border-radius: 8px;
+
+
+  }
+  .seekbar{
+    height: 2px;
+    width: 97%;
+    border: 2px solid black;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    margin: 6px;
+  }
+  .circle{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background-color: black;
+    position: relative;
+    bottom: 6px;
+  left: -1%;
+  transition: left 0.01s;
+}
+.songTime{
+ color: black; 
+padding: 0 12px;
+position: relative;
+left: 13vw;
+}
+.songInfo{
+  position: relative;
+    right: 15vw;
+}
+.abovebar{
+  display: flex;
+  justify-content: space-between;
+}
+/* Volume Bar Container */
+.volumebar-container {
+  width: 150px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  position: relative;
+  left: 6vw;
+  top: 1vh;
+}
+
+/* Volume Bar */
+.volumebar {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #646262;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Volume Bar Circle - Correcting the Circle's Appearance */
+.volume-circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #181818; /* Default color for the circle */
+  border-radius: 50%;
+  top: -1px; /* Moves the circle slightly above the volume bar */
+  left: 0;/* Initially place the circle at 50% of the bar */
+   transition:left 0.1s linear;
+ /* Ensure it appears above the bar */
+  pointer-events: none; /* Prevents interaction with the circle itself */
+}
+.Vol{
+  position: relative;
+  left: 6.5vw;
+}
+/* Initially hide the hamburger icon */
+.hamburger-icon {
+  display: none; /* Hidden for all screen sizes by default */
+}
+.cross{
+  display: none;
+}
+@media (max-width: 768px) {
+  .left {
+      position: fixed;
+      left: -130%;
+      top: 0;
+      /* height: 100vh; */
+      z-index: 1000;
+      width: 60vw; /* Adjust width for mobile */
+      transition: all 0.3s ease-in-out
+  }
+  .buttons{
+    display: grid;
+    row-gap: 5px;
+}
+  .hamburger{
+    display: flex;
+  }
+  .SongsHeader{
+    gap: 6px;
+    padding: 8px;
+  }
+  .abovebar{
+    display: block;
+    height: 10vh; 
+    margin: 20px 0;
+    width: 100%;
+}
+  .songInfo{
+    position: absolute;
+    right: 24vw;
+    bottom: 15.5vh;
+}
+.songbtn{
+  position: relative;
+    left: 22vw;
+    top: 1vh;
+}
+ .songlist{ 
+  height: 50vh;
+}
+.Vol{
+  top: 2vh;
+    position: relative;
+    right: 2vw;
+}
+.volumebar-container{
+  top: -1.2vh;
+    position: relative;
+    left: 13vw;
+}
+.songTime{
+  display: flex;
+    justify-content: space-around;
+    margin-left: 25vw;
+}
+  .cross{
+    display: block;
+    position: absolute;
+    left: 45vw;
+    cursor: pointer;
+  }
+  .hamburger-icon {
+    display: block; /* Visible for smaller screens */
+    position: absolute;
+    /* top: 2px; Adjust as needed */
+    /* right: 10px; Adjust as needed */
+    cursor: pointer;
+    /* z-index: 1000; Ensure it appears above other elements */
+    filter: invert(1);
+}
+  .nav{
+    margin-left: 60px;
+  }
+
+  .left.show {
+      left: 0; /* Show when the menu button is clicked */
+  }
+
+  .right {
+      flex: 1;
+      width: 100%; /* Right section takes full width */
+  }
+
+  .menu-btn {
+      display: block; /* Show menu button */
+  }
+  .playbar{
+    position: sticky;
+    width: 90%;
+      width: calc(100vw - 75px);
+  }
+  .container{
+     height: 100vh; 
+  }
+@media (max-width: 992px) {
+  .songlist {
+      overflow-x: scroll; /* Add scroll to song list */
+  }
+  .container{
+    height: 100vh;
+  }
+}
+@media(min-width:481px) and (max-width:768px){
+  .left{
+    width:30vw;
+  }
+  .songInfo{
+        right: 41vw;
+    }
+  .songbtn{
+        left: 36vw;
+        top: 1vh;
+  }
+  .volumebar-container{
+    top: -1.2vh;
+        left: 9vw;
+  }
+  .songTime{
+    margin-left: 40vw;
+  }
+  .right{
+    padding: 20px;
+  }
+  .playbar{
+    position: sticky;
+  }
+  .songlist{
+    overflow-x: scroll;
+  }
+  @media (orientation:landscape){
+    .left{
+      width: 25vw;
+    }
+    @media (orientation:portrait) {
+.left{
+  width: 35vw;
+}      
+.playbar{
+  position: sticky;
+}
+    }
+    
+  }
+}
+}

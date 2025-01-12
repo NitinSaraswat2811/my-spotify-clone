@@ -1,0 +1,13 @@
+# Enable directory indexing
+Options +Indexes
+
+# Allow access to MP3 files
+<FilesMatch "\.mp3$">
+    Require all granted
+</FilesMatch>
+
+# Enable Cross-Origin Resource Sharing (CORS)
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, OPTIONS"
+Header set Access-Control-Allow-Headers "Range"
+Header set Access-Control-Expose-Headers "Content-Length, Content-Range"
